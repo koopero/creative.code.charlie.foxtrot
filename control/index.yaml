@@ -1,0 +1,9 @@
+load: 
+  - index.md
+  - Alfa.md
+
+meta:
+  type:
+    percent:
+      type: number
+

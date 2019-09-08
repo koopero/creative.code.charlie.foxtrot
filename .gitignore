@@ -1,0 +1,35 @@
+
+
+# Runtime output from applications, including snapshots and
+# recorder output and intermediary files.
+data/**
+
+# The master persistence file for applications. This file is used
+# to maintain state between runs of the application.
+# Although it is handy to keep this file in git, since the state
+# of an application is an important asset, it can become messy,
+# especially in multi-user or multi-machine applications.
+# !data/persist.yaml
+
+# Local config file.
+loopin.local.yaml
+
+# Binary files from loopin-native.
+native/
+
+#
+# Node Stuff
+#
+node_modules/
+npm-debug.log
+yarn.lock
+yarn-error.log
+package-lock.json
+
+#
+# OS and other
+#
+.DS_Store
+.vscode
+.AppleDouble
+tmp/

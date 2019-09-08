@@ -1,0 +1,13 @@
+# Remove the next line once you have a show/buffer control
+show/buffer: white
+
+window:
+  title: loopin-base
+  width: 1280
+  height: 720
+  fullscreen: false
+
+# Here we define white, which comes in handy.
+pixels/white:
+  format: hex2
+  data: fff
