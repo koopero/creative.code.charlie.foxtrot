@@ -1,5 +1,3 @@
-
-
 # Runtime output from applications, including snapshots and
 # recorder output and intermediary files.
 data/**
