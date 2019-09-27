@@ -2,5 +2,14 @@
   "name": "creative.code.charlie.foxtrot",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "deepcolour": "^2.0.0",
+    "fs-extra": "^8.1.0",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.15"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
 }

@@ -1,0 +1,42 @@
+show/buffer: Charlie
+
+
+
+syphon/Charlie:
+  mode: server
+
+render/Charlie:
+  advance: true
+  blend: none
+  
+  transform:
+    x: -0.5
+    y: -0.5
+    scale: 0.5
+
+  layer/Whiskey:
+    texture/src:
+      buffer: Whiskey
+
+    transform:
+      x: 0.5
+      y: -0.5
+      scale: 0.5
+
+  layer/Tango:
+    texture/src:
+      buffer: Tango
+
+    transform:
+      x: -0.5
+      y: 0.5
+      scale: 0.5
+
+  layer/Foxtrot:
+    texture/src:
+      buffer: Foxtrot
+
+    transform:
+      x: 0.5
+      y: 0.5
+      scale: 0.5

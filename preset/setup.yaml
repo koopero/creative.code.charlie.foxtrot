@@ -1,13 +1,11 @@
-# Remove the next line once you have a show/buffer control
-show/buffer: white
-
 window:
-  title: loopin-base
+  title: creative.code.charlie.foxtrot
   width: 1280
-  height: 720
+  height: 960
   fullscreen: false
 
 # Here we define white, which comes in handy.
 pixels/white:
   format: hex2
   data: fff
+

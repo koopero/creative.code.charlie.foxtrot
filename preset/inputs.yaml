@@ -1,0 +1,8 @@
+kinect/Kilo:
+  output: alpha
+  registration: true
+
+
+buffer/Mike:
+  width: 512
+  height: 1

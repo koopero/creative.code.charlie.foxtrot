@@ -1,6 +1,3 @@
-# Set verbose console logging.
-debug/verbose: true
-
 # Server configuration.
 server:
   # HTTP port

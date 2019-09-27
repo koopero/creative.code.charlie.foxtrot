@@ -1,0 +1,20 @@
+buffer/Charlie:
+  width: 2880
+  height: 2160
+  format: rgb
+
+buffer/Whiskey:
+  width: 1440
+  height: 1080
+
+buffer/Tango:
+  width: 1440
+  height: 1080
+
+buffer/FoxTrot:
+  width: 1440
+  height: 1080
+
+buffer/India:
+  width: 1440
+  height: 1080

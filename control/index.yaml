@@ -1,9 +1,186 @@
 load: 
   - index.md
-  - Alfa.md
 
 meta:
   type:
+    debug:
+      type: group
+      subs:
+        entropy:
+          path: /entropy
+          type: number
+          unit: '%'
+          
+
     percent:
       type: number
+
+    bufferOptions:
+      type: options
+      options:
+        - Charlie
+        - Delta
+        - Foxtrot
+        - Golf
+        - Hotel
+        - India
+        - Juliette
+        - Kilo
+        - Lima
+        - Mike
+        - Tango
+        - Whiskey
+        - value: red
+          colour: red
+        - value: green
+          colour: green
+        - value: blue
+          colour: blue
+
+    transform:
+      type: group
+      subs:
+        x:
+          type: float
+          min: -1
+          direction: right
+        y:
+          type: float
+          min: -1
+          direction: down
+        rotate:
+          type: float
+          min: 0
+          max: 360
+          unit: deg
+        
+    texture:
+      type: group
+      layout: vertical
+      subs:
+        buffer:
+          type: bufferOptions
+
+        filter:
+          options:
+            - linear
+            - nearest
+
+    geometry:
+      type: group
+        
+    shaderSelect:
+      type: options
+      options:
+        - November
+        - Oscar
+        - Papa
+        - Quebec
+        - Romeo
+
+    kinect:
+      type: group
+      # subs:
+      #   tilt:
+      #     type: number
+      #     min: -15
+      #     max: 15
+      #     unit: deg
+        
+      #   led:
+      #     options:
+      #       - red
+      #       - green
+      #       - yellow
+
+    geometrySelect:
+      type: options
+      options:
+        - Xray
+        - Yankee
+        - Zulu
+
+    backgroundSettings:
+      type: group
+      title: Background Settings
+      subs:
+        passes:
+          type: number
+          min: 0
+          max: 8
+          quant: 1
+          digits: 0
+
+    renderSettings:
+      type: group
+      title: Render Settings
+      subs:
+        geometry:
+          type: geometrySelect
+
+        passes:
+          type: number
+          min: 0
+          max: 8
+          quant: 1
+          digits: 0
+            
+        blend:
+          options:
+            - none
+            - alpha
+            - min
+            - max
+            
+        transform:
+          type: transform
+
+    texturePair:
+      type: group
+      subs:
+        One:
+          type: texture
+
+        Two:
+          type: texture
+
+
+    layer:
+      type: group
+      subs:
+        shader:
+          colour: blue
+          type: shaderSelect
+
+    geometrySphere:
+      type: group
+      subs:
+        sphere:
+          subs:
+            count:
+              type: number
+              quant: 1
+              min: 1
+              max: 64
+              pow: 1.5
+
+            cols:
+              type: number
+              quant: 1
+              min: 1
+              max: 64
+              pow: 1.5
+            
+            rows:
+              type: number
+              quant: 1
+              min: 1
+              max: 64
+              pow: 1.5
+
+            
+
+
+
+
 

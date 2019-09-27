@@ -1,0 +1,12 @@
+
+pixels/red:
+  format: float
+  data: 1 0 0
+
+pixels/green:
+  format: hex2
+  data: 0f0
+
+pixels/blue:
+  format: hex
+  data: 0000ff

@@ -1,7 +1,8 @@
 async function run() {
   require('loopin-base').open( __dirname )
   .then( ( loopin ) => {
-    // Your JS here.
+    loopin.plugin( require('./src/entropy.js') )
+    loopin.plugin( require('./src/log.js') )
   } )
 }
 

@@ -1,0 +1,10 @@
+render/Echo:
+  clear: true
+  advance: true
+  order: 0
+  buffer: Foxtrot
+
+render/Foxtrot:
+  clear: false
+  advance: false
+  order: 1

@@ -1,0 +1,10 @@
+image/India_loader:
+  replace: true
+
+render/India:
+  src: India_loader
+
+  shader: fit_aspect
+
+  transform:
+    mode: cover

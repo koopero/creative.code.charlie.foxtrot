@@ -1,0 +1,10 @@
+render/Echo:
+  clear: true
+  advance: true
+  order: 0
+  buffer: Tango
+
+render/Tango:
+  clear: false
+  advance: false
+  order: 1

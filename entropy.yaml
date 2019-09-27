@@ -1,0 +1,97 @@
+lists:
+  buffers:
+    - Charlie
+    - Delta
+    - Golf
+    - Hotel
+    - India
+    - Juliette
+    - Kilo
+    - Mike
+    - Foxtrot
+    - Tango
+    - Whiskey
+  shaders:
+    - November
+    # - Oscar
+    - Papa
+    # - Romeo
+
+  blends:
+    - none
+    - alpha
+    # - add
+    - multiply
+
+  filters:
+    - nearest
+    - linear
+
+images:
+  /loopin/image/India_loader/src:
+  /loopin/image/Juliette_loader/src:
+
+
+floats:
+  /loopin/uniform/vec4/Alpha/x:
+  /loopin/uniform/vec4/Alpha/y:
+  /loopin/uniform/vec4/Alpha/z:
+  /loopin/uniform/vec4/Alpha/w:
+  /loopin/render/Whiskey/transform/x: { min: -0.25, max: 0.25 }
+  /loopin/render/Whiskey/transform/y: { min: -0.25, max: 0.25 }
+  /loopin/render/Whiskey/transform/rotate: { min: -20, max: 20 }
+  /loopin/render/Tango/transform/x: { min: -0.25, max: 0.25 }
+  /loopin/render/Tango/transform/y: { min: -0.25, max: 0.25 }
+  /loopin/render/Tango/transform/rotate: { min: -20, max: 20 }
+  /loopin/render/Foxtrot/transform/x: { min: -0.25, max: 0.25 }
+  /loopin/render/Foxtrot/transform/y: { min: -0.25, max: 0.25 }
+  /loopin/render/Foxtrot/transform/rotate: { min: -20, max: 20 }
+  /loopin/render/Whiskey/transform/scale: { min: 0, max: 2 }
+  /loopin/render/Tango/transform/scale: { min: 0, max: 2 }
+  /loopin/render/Foxtrot/transform/scale: { min: 0, max: 2 }
+
+options:
+  /loopin/render/Whiskey/texture/One/buffer: buffers
+  /loopin/render/Whiskey/texture/One/filter: filters
+  /loopin/render/Tango/texture/One/buffer: buffers
+  /loopin/render/Tango/texture/One/filter: filters
+  /loopin/render/Foxtrot/texture/One/buffer: buffers
+  /loopin/render/Foxtrot/texture/One/filter: filters
+  /loopin/render/Echo/texture/One/buffer: buffers
+  /loopin/render/Echo/texture/One/filter: filters
+  /loopin/render/Sierra/texture/One/buffer: buffers
+  /loopin/render/Sierra/texture/One/filter: filters
+  /loopin/render/Victor/texture/One/buffer: buffers
+  /loopin/render/Victor/texture/One/filter: filters
+  /loopin/render/Whiskey/texture/Two/buffer: buffers
+  /loopin/render/Whiskey/texture/Two/filter: filters
+  /loopin/render/Tango/texture/Two/buffer: buffers
+  /loopin/render/Tango/texture/Two/filter: filters
+  /loopin/render/Foxtrot/texture/Two/buffer: buffers
+  /loopin/render/Foxtrot/texture/Two/filter: filters
+  /loopin/render/Echo/texture/Two/buffer: buffers
+  /loopin/render/Echo/texture/Two/filter: filters
+  /loopin/render/Sierra/texture/Two/buffer: buffers
+  /loopin/render/Sierra/texture/Two/filter: filters
+  /loopin/render/Victor/texture/Two/buffer: buffers
+  /loopin/render/Victor/texture/Two/filter: filters
+
+  /loopin/render/Echo/shader: shaders
+  /loopin/render/Foxtrot/shader: shaders
+  /loopin/render/Sierra/shader: shaders
+  /loopin/render/Tango/shader: shaders
+  /loopin/render/Victor/shader: shaders
+  /loopin/render/Whiskey/shader: shaders
+
+  /loopin/render/Whiskey/blend: blends
+  /loopin/render/Tango/blend: blends
+  /loopin/render/Foxtrot/blend: blends
+
+
+
+
+pixels:
+  /loopin/pixels/Golf: { width: 8, height: 1 }
+  /loopin/pixels/Hotel: { width: 6, height: 2 }
+  /loopin/pixels/Delta: { width: 8, height: 8 }
+  /loopin/pixels/Juliette: { width: 8, height: 1 }

@@ -12,9 +12,6 @@ data/**
 # Local config file.
 loopin.local.yaml
 
-# Binary files from loopin-native.
-native/
-
 #
 # Node Stuff
 #
