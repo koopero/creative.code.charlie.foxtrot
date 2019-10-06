@@ -1,20 +1,20 @@
 #include "lib/common.glsl"
 #include "lib/frag.glsl"
+
 void main() {
   // Input Textures
-  vec2 OneCoord = srcCoord;
-  vec4 One = Texture( OneSampler, OneCoord );
+  vec2 coord = srcCoord;
+  vec2 radial = vec2( 
+    1.0 - atan( coord.y - 0.5, coord.x - 0.5 ) / PI,
+    length( coord.xy - 0.5 ) * 2.0 * 0.7
+  );
 
-  vec2 TwoCoord = srcCoord;
+  radial.y = pow( radial.y, 0.5 );
 
-  TwoCoord.xy += One.xy;
-  vec4 Two = Texture( TwoSampler, TwoCoord );
+  radial = mirrorCoord( radial );
 
-  vec2 ThreeCoord = srcCoord;
-  vec4 Three = Texture( ThreeSampler, ThreeCoord );
+  coord = mix( coord, radial, 0.9 );
 
-  // Just output one
-  OUT = mix( One, Two, 0.5 );
-
+  vec4 One = Texture( OneSampler, coord );
+  OUT.rgba = One.rgba;
 }
-#endif 

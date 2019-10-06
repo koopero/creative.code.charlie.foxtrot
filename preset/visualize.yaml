@@ -1,0 +1,60 @@
+render/Alfa:
+  shader: Alfa
+  texture:
+    bar:
+      buffer: graph_bar
+      filter: linear
+    
+    channels:
+      buffer: graph_channels
+      filter: nearest
+
+render/Bravo:
+  clear: true
+  shader: Bravo
+  mesh: Bravo
+  texture:
+    bar:
+      buffer: graph_bar
+      filter: linear
+    
+    channels:
+      buffer: graph_channels
+      filter: nearest
+
+mesh/Bravo:
+  aspect: 1
+  arc:
+    radius: 1
+
+render/Uniform:
+  shader: Uniform
+  texture:
+    bar:
+      buffer: graph_bar
+      filter: linear
+    
+    channels:
+      buffer: graph_channels
+      filter: nearest
+
+render/Mike:
+  shader: Mike
+  mesh: square
+  texture/One/buffer: Mike_input
+  transform:
+    mode: cover
+    scale: 2
+  
+
+pixels/graph_channels:
+  format: hex2
+  channels: rgba
+  data: f22f 2f2f 22ff aa2f
+
+
+pixels/graph_bar:
+  format: hex2
+  channels: va
+  width: 8
+  data: 'ff aa 77 44 00 11 32 44'

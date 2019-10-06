@@ -3,6 +3,12 @@
 #include "ofxLoopin/buffer.glsl"
 #include "ofxLoopin/src.glsl"
 #include "ofxLoopin/clock.glsl"
+#include "lib/snoise.glsl"
+
+
+uniform float zoom;
+uniform float driftAmount = 1.0;
+uniform float driftFrequency = 2.1;
 
 
 void main()
@@ -15,17 +21,22 @@ void main()
 
   vec2 scale = vec2( 1 );
   vec4 pos = position;
-  vec2 drift = vec2(
-    0,
-    cos(clockTime)
+  vec2 noiseUV = vec2( 
+    clockTime / driftFrequency,
+    0
   );
 
   if ( srcAsp < bufferAsp ) {
     scale.y = bufferAsp / srcAsp;
   }
 
-  float zoom = 1.1;
-  scale *= zoom;
+  scale *= zoom + 1;
+  vec2 drift = vec2(
+    snoise( noiseUV.yx / scale.x ),
+    snoise( noiseUV.xy / scale.y )
+  );
+
+  drift *= driftAmount;
 
   pos.xy *= scale;
   pos.x += max( 0.0, scale.x - 1.0 ) * 0.5 * drift.x;

@@ -1,18 +1,31 @@
-show/buffer: Charlie
-
-
+show/buffer: Charlie_zoom
 
 syphon/Charlie:
+  buffer: Charlie_zoom
   mode: server
 
 render/Charlie:
+  clear: true
   advance: true
   blend: none
   
+  texture/src/buffer: Charlie
+
   transform:
     x: -0.5
     y: -0.5
     scale: 0.5
+
+  layer/title:
+    blend: none
+    advance: false
+    texture/src: Charlie_text
+    aspect: 6
+    transform:
+      mode: cover
+      scale: 0.03
+      y: -0.1
+      x: -0.5
 
   layer/Whiskey:
     texture/src:
@@ -40,3 +53,18 @@ render/Charlie:
       x: 0.5
       y: 0.5
       scale: 0.5
+
+
+render/Charlie_zoom:
+  texture/src:
+    buffer: Charlie
+
+  order: 9
+  transform:
+    mode: cover
+    scale: 2
+    x: 1
+    y: 1
+
+text/Charlie_text:
+  text: ' - + Charlie + - '

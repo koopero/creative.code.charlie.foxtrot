@@ -1,27 +1,46 @@
 lists:
   buffers:
+    - Alfa
+    - Bravo
     - Charlie
     - Delta
+    - Echo
+    - Foxtrot
     - Golf
     - Hotel
     - India
     - Juliette
     - Kilo
+    - Lima
     - Mike
-    - Foxtrot
-    - Tango
-    - Whiskey
-  shaders:
     - November
-    # - Oscar
+    - Oscar
     - Papa
-    # - Romeo
+    - Quebec
+    - Romeo
+    - Sierra
+    - Tango
+    - Uniform
+    - Whiskey
+    - Xray
+    - Yankee
+    - Zulu
+  pixels:
+    - Delta
+    - Golf
+    - Hotel
 
   blends:
     - none
     - alpha
-    # - add
-    - multiply
+    - max
+    - add
+
+  blendOver:
+    - none
+    - alpha
+    - max
+    - min
 
   filters:
     - nearest
@@ -33,65 +52,126 @@ images:
 
 
 floats:
-  /loopin/uniform/vec4/Alpha/x:
-  /loopin/uniform/vec4/Alpha/y:
-  /loopin/uniform/vec4/Alpha/z:
-  /loopin/uniform/vec4/Alpha/w:
-  /loopin/render/Whiskey/transform/x: { min: -0.25, max: 0.25 }
-  /loopin/render/Whiskey/transform/y: { min: -0.25, max: 0.25 }
-  /loopin/render/Whiskey/transform/rotate: { min: -20, max: 20 }
-  /loopin/render/Tango/transform/x: { min: -0.25, max: 0.25 }
-  /loopin/render/Tango/transform/y: { min: -0.25, max: 0.25 }
-  /loopin/render/Tango/transform/rotate: { min: -20, max: 20 }
-  /loopin/render/Foxtrot/transform/x: { min: -0.25, max: 0.25 }
-  /loopin/render/Foxtrot/transform/y: { min: -0.25, max: 0.25 }
-  /loopin/render/Foxtrot/transform/rotate: { min: -20, max: 20 }
-  /loopin/render/Whiskey/transform/scale: { min: 0, max: 2 }
-  /loopin/render/Tango/transform/scale: { min: 0, max: 2 }
-  /loopin/render/Foxtrot/transform/scale: { min: 0, max: 2 }
+  /loopin/uniform/vec4/Alfa/x:
+  /loopin/uniform/vec4/Alfa/y:
+  /loopin/uniform/vec4/Alfa/z:
+  /loopin/uniform/vec4/Alfa/w:
+  /loopin/uniform/vec4/Bravo/x:
+  /loopin/uniform/vec4/Bravo/y:
+  /loopin/uniform/vec4/Bravo/z:
+  /loopin/uniform/vec4/Bravo/w:
+
+  /loopin/render/India/float/zoom: { max: 0.1 }
+  /loopin/render/Juliette/float/zoom: { max: 0.1 }
+
+
+  /loopin/render/Lima/float/rotation: { min: -180, max: 180 }
+  /loopin/render/Lima/float/zoom: { min: -2, max: 2 }
+  /loopin/render/Lima/float/frequency: { min: 0.001, max: 0.1 }
+  /loopin/render/Lima/float/split: 
+
+  /loopin/render/Mike/transform/x: { min: -1, max: 1 }
+  /loopin/render/Mike/transform/y: { min: -1, max: 1 }
+  /loopin/render/Mike/transform/rotate: { min: -180, max: 180 }
+
+
+
+  /loopin/mesh/Papa/plane/cols: { min: 1, max: 60 }
+  /loopin/mesh/Papa/plane/rows: { min: 1, max: 60 }
+  /loopin/camera/Papa/yaw: { min: -180, max: 180 }
+  /loopin/camera/Papa/pitch: { min: -180, max: 180 }
+  /loopin/camera/Papa/roll: { min: -180, max: 180 }
+  /loopin/camera/Papa/fov: { min: 2, max: 120 }
+  /loopin/camera/Papa/zoom: { min: -1, max: 1 }
+
+  /loopin/render/Papa/transform/x: { min: -1, max: 1 }
+  /loopin/render/Papa/transform/y: { min: -1, max: 1 }
+  /loopin/render/Papa/transform/scale: { min: 0.5, max: 0.75 }
+
+
+  /loopin/camera/Sierra/yaw: { min: -180, max: 180 }
+  /loopin/camera/Sierra/pitch: { min: -180, max: 180 }
+  /loopin/camera/Sierra/roll: { min: -180, max: 180 }
+  /loopin/camera/Sierra/fov: { min: 2, max: 120 }
+  /loopin/camera/Sierra/zoom: { min: -2, max: 2 }
+
+
+  /loopin/render/Sierra/layer/over/transform/x: { min: -1, max: 1 }
+  /loopin/render/Sierra/layer/over/transform/y: { min: -1, max: 1 }
+  /loopin/render/Sierra/layer/over/transform/scale: { min: 0.5, max: 0.75 }
+
+  /loopin/uniform/vec4/Uniform/x:
+  /loopin/uniform/vec4/Uniform/y:
+  /loopin/uniform/vec4/Uniform/z:
+  /loopin/uniform/vec4/Uniform/w:
+
+  /loopin/render/Yankee/float/rotation: { min: -180, max: 180 }
+  /loopin/render/Yankee/float/zoom: { min: -2, max: 2 }
+  /loopin/render/Yankee/float/frequency: { min: 0.001, max: 0.1 }
+  /loopin/render/Yankee/float/split: 
+
+
 
 options:
-  /loopin/render/Whiskey/texture/One/buffer: buffers
-  /loopin/render/Whiskey/texture/One/filter: filters
-  /loopin/render/Tango/texture/One/buffer: buffers
-  /loopin/render/Tango/texture/One/filter: filters
-  /loopin/render/Foxtrot/texture/One/buffer: buffers
-  /loopin/render/Foxtrot/texture/One/filter: filters
+  /loopin/render/Charlie/texture/src/buffer: buffers
+
+
   /loopin/render/Echo/texture/One/buffer: buffers
   /loopin/render/Echo/texture/One/filter: filters
+  
+  /loopin/render/Foxtrot/texture/One/buffer: buffers
+  /loopin/render/Foxtrot/texture/One/filter: filters
+
+  /loopin/render/November/texture/One/buffer: buffers
+  /loopin/render/November/texture/One/filter: filters
+  /loopin/render/November/texture/Two/buffer: buffers
+  /loopin/render/November/texture/Two/filter: filters
+
+  /loopin/render/Oscar/texture/One/buffer: buffers
+  /loopin/render/Oscar/texture/One/filter: filters
+  
+  /loopin/render/Papa/texture/One/buffer: buffers
+  /loopin/render/Papa/texture/One/filter: filters
+  /loopin/render/Papa/blend: blends
+
+
+  /loopin/render/Quebec/texture/One/buffer: buffers
+  /loopin/render/Quebec/texture/One/filter: filters
+
+
+  /loopin/render/Quebec/texture/Two/buffer: buffers
+  /loopin/render/Quebec/texture/Two/filter: filters
+
+
   /loopin/render/Sierra/texture/One/buffer: buffers
   /loopin/render/Sierra/texture/One/filter: filters
+  /loopin/render/Sierra/layer/over/texture/One/buffer: buffers
+  /loopin/render/Sierra/layer/over/texture/One/filter: filters
+  /loopin/render/Sierra/layer/over/blend: blendOver
+
+  /loopin/render/Tango/texture/One/buffer: buffers
+  /loopin/render/Tango/texture/One/filter: filters
+
   /loopin/render/Victor/texture/One/buffer: buffers
   /loopin/render/Victor/texture/One/filter: filters
-  /loopin/render/Whiskey/texture/Two/buffer: buffers
-  /loopin/render/Whiskey/texture/Two/filter: filters
-  /loopin/render/Tango/texture/Two/buffer: buffers
-  /loopin/render/Tango/texture/Two/filter: filters
-  /loopin/render/Foxtrot/texture/Two/buffer: buffers
-  /loopin/render/Foxtrot/texture/Two/filter: filters
-  /loopin/render/Echo/texture/Two/buffer: buffers
-  /loopin/render/Echo/texture/Two/filter: filters
-  /loopin/render/Sierra/texture/Two/buffer: buffers
-  /loopin/render/Sierra/texture/Two/filter: filters
   /loopin/render/Victor/texture/Two/buffer: buffers
   /loopin/render/Victor/texture/Two/filter: filters
+  /loopin/render/Victor/texture/Three/buffer: buffers
+  /loopin/render/Victor/texture/Three/filter: filters
 
-  /loopin/render/Echo/shader: shaders
-  /loopin/render/Foxtrot/shader: shaders
-  /loopin/render/Sierra/shader: shaders
-  /loopin/render/Tango/shader: shaders
-  /loopin/render/Victor/shader: shaders
-  /loopin/render/Whiskey/shader: shaders
+  /loopin/render/Whiskey/texture/One/buffer: buffers
+  /loopin/render/Whiskey/texture/One/filter: filters
 
-  /loopin/render/Whiskey/blend: blends
-  /loopin/render/Tango/blend: blends
-  /loopin/render/Foxtrot/blend: blends
+  /loopin/render/Xray/texture/One/buffer: buffers
+  /loopin/render/Xray/texture/One/filter: filters
+  /loopin/render/Xray/texture/Two/buffer: buffers
+  /loopin/render/Xray/texture/Two/filter: filters
 
-
-
+  /loopin/render/Zulu/texture/One/buffer: buffers
+  /loopin/render/Zulu/texture/One/filter: filters
+  /loopin/render/Zulu/texture/Two/buffer: pixels
 
 pixels:
-  /loopin/pixels/Golf: { width: 8, height: 1 }
-  /loopin/pixels/Hotel: { width: 6, height: 2 }
-  /loopin/pixels/Delta: { width: 8, height: 8 }
-  /loopin/pixels/Juliette: { width: 8, height: 1 }
+  /loopin/pixels/Delta: { width: 8, height: 6 }
+  /loopin/pixels/Golf: { width: 4, height: 3 }
+  /loopin/pixels/Hotel: { width: 8, height: 1 }

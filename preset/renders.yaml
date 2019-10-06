@@ -1,0 +1,108 @@
+render/Echo:
+  clear: true
+  advance: true
+  order: 0
+  buffer: Echo
+  shader: Echo
+  texture/feedback:
+    buffer: Echo
+    filter: linear
+
+
+render/Foxtrot:
+  shader: One
+  
+render/Lima:
+  shader: Lima
+  mesh: square
+
+render/November:
+  shader: November
+
+render/Oscar:
+  mesh: square
+  shader: Oscar
+
+
+render/Papa:
+  clear: true
+  mesh: Papa
+  shader: Papa
+  camera: Papa
+  advance: true
+
+mesh/Papa:
+  aspect: 1
+  plane:
+    cols: 12
+    rows: 12
+    count: 2
+    split: true
+
+render/Romeo:
+  clear: true
+  shader: Romeo
+  advance: true
+
+render/Quebec:
+  shader: Quebec
+
+render/Sierra:
+  clear: true
+  advance: false
+  order: 0
+  buffer: Sierra
+  shader: One
+  depth: true
+
+  layer/over:
+    aspect: 1
+    depth: true
+    clear: false
+    mesh: Sierra
+    camera: Sierra
+    shader: Sierra
+    transform:
+      mode: contain
+
+mesh/Sierra:
+  apsect: 1
+  sphere:
+    rows: 40
+    cols: 80
+
+render/Tango:
+  clear: true
+  order: 1
+  depth: true
+  shader: One
+
+
+
+render/Victor:
+  clear: true
+  advance: true
+  order: 0
+  buffer: Victor
+  shader: Victor
+
+
+
+render/Whiskey:
+  order: 1
+  advance: false
+  shader: One
+
+render/Xray:
+  order: 1
+  shader: Xray
+
+render/Yankee:
+  order: 1
+  shader: Yankee
+
+render/Zulu:
+  order: 1
+  shader: Zulu
+  texture/Two:
+    filter: linear

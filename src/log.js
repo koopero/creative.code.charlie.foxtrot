@@ -9,7 +9,8 @@ module.exports = function ( {
   const logFile = loopin.filesResolve( file )
   const logDir = path.dirname( logFile )
   fs.ensureDirSync( logDir )
-  let logStream = fs.createWriteStream( lofFile, { flag: 'a' } )
+  let logStream = fs.createWriteStream( logFile, { flags: 'a' } )
+  
   let cursor = new (H.Cursor)( {
     listening: true,
     path: '/',

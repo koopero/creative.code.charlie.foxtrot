@@ -1,20 +1,84 @@
+buffer/Alfa:
+  width: 640
+  height: 480
+
 buffer/Charlie:
   width: 2880
   height: 2160
   format: rgb
 
-buffer/Whiskey:
+buffer/Charlie_zoom:
   width: 1440
   height: 1080
+  format: rgb
 
-buffer/Tango:
+buffer/Echo:
   width: 1440
   height: 1080
+  format: rgba32
 
 buffer/FoxTrot:
   width: 1440
   height: 1080
 
+buffer/Lima:
+  width: 640
+  height: 480
+
 buffer/India:
+  width: 1440
+  height: 1080
+
+buffer/Juliette:
+  width: 1440
+  height: 1080
+
+buffer/November:
+  width: 1440
+  height: 1080
+
+buffer/Oscar:
+  width: 1440
+  height: 1080
+
+buffer/Papa:
+  width: 1440
+  height: 1080
+
+buffer/Quebec:
+  width: 1440
+  height: 1080
+
+buffer/Romeo:
+  width: 1440
+  height: 1080
+
+buffer/Sierra:
+  width: 1440
+  height: 1080
+  depth: true
+
+buffer/Tango:
+  width: 1440
+  height: 1080
+
+buffer/Victor:
+  width: 1440
+  height: 1080
+
+buffer/Whiskey:
+  width: 1440
+  height: 1080
+  depth: true
+
+buffer/Xray:
+  width: 1440
+  height: 1080
+
+buffer/Yankee:
+  width: 1440
+  height: 1080
+
+buffer/Zulu:
   width: 1440
   height: 1080

@@ -17,6 +17,8 @@ module.exports = async function ( {
   } )
 
   
+  randomize( 1, 0 )
+  
   loopin.on('frame', onFrame )
 
   
@@ -25,7 +27,8 @@ module.exports = async function ( {
     delta += parseFloat( frame.delta ) || 0 
 
     if ( delta > 1/rate ) {
-      randomize( delta )
+      const amount = parseFloat( cursor.get() ) || 0
+      randomize( amount, delta )
       delta = 0
     }
   }
@@ -35,15 +38,13 @@ module.exports = async function ( {
 
   
 
-  function randomize( delta ) {
-    const amount = parseFloat( cursor.get() ) || 0
+  function randomize( amount, delta ) {
     const root = loopin.H.root 
 
-    if ( !amount )
-      return
-
     const maybeSet = ( value, path ) => {
-      if ( random() > amount * delta ) 
+      let existing = loopin.H.root.get( path )
+
+      if ( !_.isUndefined( existing ) && random() > amount * delta ) 
         return
 
       // console.log( path, '=', value )
@@ -52,6 +53,9 @@ module.exports = async function ( {
 
     let imageOptions = _.map( root.get('upload'), ( img ) => img && img.src )
     imageOptions = _.filter( imageOptions )
+    if ( !imageOptions.length ) {
+      imageOptions.push("image/meetup.jpeg")
+    }
 
     _.map( spec.floats, ( number, path ) => {
       let { min = 0, max = 1 } = number || {}
@@ -59,7 +63,8 @@ module.exports = async function ( {
       maybeSet( value, path ) 
     } )
     _.map( spec.options, ( list, path ) => {
-      list = _.filter( spec.lists[list] )
+      if ( _.isString( list ) )
+        list = _.filter( spec.lists[list] )
       let index = floor( random() * list.length )
       maybeSet( list[index], path )
     })

@@ -3,6 +3,6 @@ kinect/Kilo:
   registration: true
 
 
-buffer/Mike:
-  width: 512
+buffer/Mike_input:
+  width: 16
   height: 1

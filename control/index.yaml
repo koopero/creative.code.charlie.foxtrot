@@ -3,23 +3,53 @@ load:
 
 meta:
   type:
-    debug:
+
+    uniform:
       type: group
+      hide: path
+      sub:
+        type: float
+
       subs:
-        entropy:
-          path: /entropy
-          type: number
-          unit: '%'
-          
+        x: 
+          colour: red
+        y: 
+          colour: green
+        z: 
+          colour: blue
+        w: 
+          colour: yellow
 
-    percent:
-      type: number
+    Alfa:
+      type: uniform
+      title: Alfa
+      path: /loopin/uniform/vec4/Alfa
 
-    bufferOptions:
+    Bravo:
+      type: uniform
+      title: Bravo
+      sub:
+        type: float
+        min: -1
+      path: /loopin/uniform/vec4/Bravo
+
+    Uniform:
+      type: uniform
+      path: /loopin/uniform/vec4/Uniform
+      title: Uniform
+
+    preview:
       type: options
+      path: loopin/render/Charlie/texture/src/buffer
+      title: Preview on Charlie
+      colour: red
+      hide: path
       options:
+        - Alfa
+        - Bravo
         - Charlie
         - Delta
+        - Echo
         - Foxtrot
         - Golf
         - Hotel
@@ -28,16 +58,261 @@ meta:
         - Kilo
         - Lima
         - Mike
+        - November
+        - Oscar
+        - Papa
+        - Romeo
+        - Sierra
         - Tango
+        - Victor
         - Whiskey
-        - value: red
+        - Xray
+        - Yankee
+        - Zulu
+
+
+
+    debug:
+      type: group
+      subs:
+        entropy:
           colour: red
-        - value: green
+          path: /entropy
+          type: number
+          unit: '%'
+          max: 0.05
+          pow: 3
+        
+        buffer:
+          path: /loopin/show/buffer
+          options:
+            - graph_channels
+            - graph_bar
+            - Alfa
+            - Echo
+            - Victor
+            - Charlie
+            - Charlie_text
+            - Charlie_zoom
+          
+            
+    cameraBackground:
+      type: group
+      subs:
+        yaw:
+          type: float
+          min: -5
+          max: 5
+          unit: deg
+        pitch:
+          type: float
+          min: -5
+          max: 5
+          unit: deg
+        roll:
+          type: float
+          min: -5
+          max: 5
+          unit: deg
+        
+        zoom:
+          type: float
+          min: 0
+          max: 0.25
+
+    foregroundTexture:
+      type: group
+      title: Foreground Texture
+      hide: path
+      colour: green
+      subs:
+        One:
+          title: ''
+          hide: path
+          type: texture
           colour: green
-        - value: blue
-          colour: blue
+
+    charlieFilter:
+      type: options
+      title: Charlie Filter
+      colour: red
+      hide: path
+      path: /loopin/render/Charlie/texture/src/filter
+      options:
+        - nearest
+        - linear
+
+    backgroundTexture:
+      type: group
+      title: Background Texture
+      hide: path
+      colour: green
+      subs:
+        One:
+          title: ''
+          hide: path
+          type: texture
+          colour: green
+
+    oneTexture:
+      type: group
+      title: Texture
+      hide: path
+      colour: green
+      subs:
+        One:
+          title: ''
+          hide: path
+          type: texture
+          colour: green
+
+    pixelsSelect:
+      type: options
+      title: Pixels
+      hide: path
+      colour: green
+      options: 
+        - Delta
+        - Golf
+        - Hotel
+
+    twoTextures:
+      type: group
+      title: Textures
+      hide: path
+      colour: green
+      subs:
+        One:
+          title: Texture One
+          hide: path
+          type: texture
+          colour: green
+
+        Two:
+          title: Texture Two
+          hide: path
+          type: texture
+          colour: green
+
+    threeTextures:
+      type: group
+      title: Textures
+      hide: path
+      colour: green
+      subs:
+        One:
+          title: Texture One
+          hide: path
+          type: texture
+          colour: green
+
+        Two:
+          title: Texture Two
+          hide: path
+          type: texture
+          colour: green
+
+        Three:
+          title: Texture Three
+          hide: path
+          type: texture
+          colour: green
+
+    cameraForeground:
+      type: group
+      colour: cyan
+      title: Camera
+      hide: path
+      subs:
+        yaw:
+          type: float
+          min: -210
+          max: 210
+          unit: deg
+          direction: right
+        pitch:
+          type: float
+          min: -210
+          max: 210
+          unit: deg
+        roll:
+          type: float
+          min: -210
+          max: 210
+          unit: deg
+          direction: right
+
+        fov:
+          type: float
+          unit: deg
+          min: 1
+          max: 120
+          pow: 2
+          direction: down
+        
+        zoom:
+          type: float
+          unit: "^ 2"
+          min: -2
+          max: 2
+
+    percent:
+      type: number
+
+    blendsOnBlack:
+      colour: magenta
+      type: options
+      hide: path
+      title: Blend Mode
+      options:
+        - none
+        - alpha
+        - max
+        - add
+
+    blendsOver:
+      colour: magenta
+      type: options
+      hide: path
+      title: Blend Mode
+      options:
+        - none
+        - alpha
+        - min
+        - max
+
+    bufferOptions:
+      type: options
+      options:
+        - Alfa
+        - Bravo
+        - Charlie
+        - Delta
+        - Echo
+        - Foxtrot
+        - Golf
+        - Hotel
+        - India
+        - Juliette
+        - Kilo
+        - Lima
+        - Mike
+        - November
+        - Oscar
+        - Papa
+        - Romeo
+        - Sierra
+        - Tango
+        - Victor
+        - Whiskey
+        - Xray
+        - Yankee
+        - Zulu
 
     transform:
+      colour: cyan
+      title: 2D Transform
+      hide: path
       type: group
       subs:
         x:
@@ -48,11 +323,11 @@ meta:
           type: float
           min: -1
           direction: down
-        rotate:
+        scale:
           type: float
-          min: 0
-          max: 360
-          unit: deg
+          unit: x
+          min: 0.25
+          max: 2
         
     texture:
       type: group
@@ -116,15 +391,8 @@ meta:
       title: Render Settings
       subs:
         geometry:
-          type: geometrySelect
+          type: options
 
-        passes:
-          type: number
-          min: 0
-          max: 8
-          quant: 1
-          digits: 0
-            
         blend:
           options:
             - none

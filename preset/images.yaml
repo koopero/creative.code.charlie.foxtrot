@@ -1,0 +1,22 @@
+image/India_loader:
+  replace: true
+
+render/India:
+  src: India_loader
+
+  shader: fit_aspect
+
+  transform:
+    mode: cover
+
+
+image/Juliette_loader:
+  replace: true
+
+render/Juliette:
+  src: Juliette_loader
+
+  shader: fit_aspect
+
+  transform:
+    mode: cover
