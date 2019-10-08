@@ -26,10 +26,20 @@ render/Oscar:
 
 render/Papa:
   clear: true
-  mesh: Papa
-  shader: Papa
-  camera: Papa
+  shader: One
+  camera: none
   advance: true
+
+  layer/over:
+    aspect: 1
+    depth: true
+    clear: false
+    mesh: Papa
+    camera: Papa
+    shader: Papa
+    transform:
+      mode: contain
+
 
 mesh/Papa:
   aspect: 1

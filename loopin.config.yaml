@@ -5,9 +5,6 @@ server:
 
   # Main control file
   index: control/index.yaml
-
-  # This is the file that will store persistence for
-  # your application.
   persist: data/persist.?.yaml
 
   # These directories will be shared under:

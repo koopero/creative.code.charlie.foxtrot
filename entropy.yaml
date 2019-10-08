@@ -33,6 +33,7 @@ lists:
   blends:
     - none
     - alpha
+    - min
     - max
     - add
 
@@ -84,9 +85,9 @@ floats:
   /loopin/camera/Papa/fov: { min: 2, max: 120 }
   /loopin/camera/Papa/zoom: { min: -1, max: 1 }
 
-  /loopin/render/Papa/transform/x: { min: -1, max: 1 }
-  /loopin/render/Papa/transform/y: { min: -1, max: 1 }
-  /loopin/render/Papa/transform/scale: { min: 0.5, max: 0.75 }
+  /loopin/render/Papa/layer/over/transform/x: { min: -1, max: 1 }
+  /loopin/render/Papa/layer/over/transform/y: { min: -1, max: 1 }
+  /loopin/render/Papa/layer/over/transform/scale: { min: 0.5, max: 0.75 }
 
 
   /loopin/camera/Sierra/yaw: { min: -180, max: 180 }
@@ -113,8 +114,7 @@ floats:
 
 
 options:
-  /loopin/render/Charlie/texture/src/buffer: buffers
-
+  # /loopin/render/Charlie/texture/src/buffer: buffers
 
   /loopin/render/Echo/texture/One/buffer: buffers
   /loopin/render/Echo/texture/One/filter: filters
@@ -132,7 +132,10 @@ options:
   
   /loopin/render/Papa/texture/One/buffer: buffers
   /loopin/render/Papa/texture/One/filter: filters
-  /loopin/render/Papa/blend: blends
+
+  /loopin/render/Papa/layer/over/texture/One/buffer: buffers
+  /loopin/render/Papa/layer/over/texture/One/filter: filters
+  /loopin/render/Papa/layer/over/blend: blends
 
 
   /loopin/render/Quebec/texture/One/buffer: buffers

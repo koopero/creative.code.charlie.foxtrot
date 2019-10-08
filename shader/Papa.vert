@@ -1,8 +1,6 @@
 #include "lib/common.glsl"
 #include "lib/vert.glsl"
 
-
-
 void main()
 {
   srcCoord = texcoord;
@@ -14,7 +12,6 @@ void main()
   vertColour = vec4(1,1,1,1);
 
   vec3 noiseCoord = vec3( 
-    // phase * 5.0,
     index.x + 100.1234234,
     index.y + 12.90123,
     clockTime * 0.1
@@ -31,7 +28,6 @@ void main()
   vec4 pos = vec4(0);
   pos.xy = color.rg * 2.0 - 1.0;
   pos.w = 1.0;
-  // pos.xy += spin;
   pos.xy *= scale;
   pos.y *= meshAspect;
   pos.xyz += displace;
@@ -45,9 +41,6 @@ void main()
   coord = mix( coord, srcCoord, 0.5 );
   srcCoord = coord;
   vec4 Two = Texture(TwoSampler, coord );
-  // pos.z += length( Two.rgb ) * 0.0625;
-  // pos.z -= phase * 0.1;
-  // srcCoord = mix( srcCoord, proj.xy * 0.5 + 0.5, 0.25 );
   gl_Position = modelViewProjectionMatrix * pos;
 
 }

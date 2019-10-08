@@ -9,13 +9,8 @@ uniform float frequency;
 
 
 float channel( vec3 phase, float offset ) {
-  // phase *= 1.0 + offset * 0.01;
   vec4 coord = vec4( phase, offset * split );
-
   coord.z += coord.w * 1.6; 
-  // phase += offset / 3 * split * 3.0;
-  // phase *= PI * 2.0;
-
   return snoise( coord ) * 0.5 + 0.5;
 }
 
@@ -34,4 +29,5 @@ void main() {
   OUT.r = channel( phase, 0 );
   OUT.g = channel( phase, 1 );
   OUT.b = channel( phase, 2 );
+  OUT.a = channel( phase, 3 );
 }

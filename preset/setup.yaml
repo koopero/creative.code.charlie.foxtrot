@@ -9,3 +9,13 @@ pixels/white:
   format: hex2
   data: fff
 
+clock:
+  rate: 30
+
+osd/enabled: true
+
+osd/text: |
+  Creative Code Charlie Foxtrot
+  
+  fps: %fps
+  show: %show

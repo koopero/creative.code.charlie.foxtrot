@@ -8,7 +8,7 @@
 
 uniform float zoom;
 uniform float driftAmount = 1.0;
-uniform float driftFrequency = 2.1;
+uniform float driftFrequency = 10.1;
 
 
 void main()

@@ -1,20 +1,19 @@
 # Creative Code Charlie Foxtrot
 
-Welcome to *C3F*, presented by [Vancouver Creative Tech](https://www.meetup.com/Vancouver-Creative-Technology/). By viewing this page, you are a participating in a 
+Welcome to *C3F*, presented by [Vancouver Creative Tech](https://www.meetup.com/Vancouver-Creative-Technology/). This is an experiment in the ad-hoc, collaborative creation of abstract digital art.
 
 ## Mission
 
-Your mission, as a *C3F* participant, is the iterative asthetic improvement 
+Your mission, as a *C3F* participant, is the iterative, tasteful improvement 
 
 ## Machine
 
-The core of *C3F* is configurable rendering engine. It contains 26 units, designated in NATO phonetic alphabet from [Alfa](#alfa) to [Zulu](#zulu). Each unit has its own page of *Controls* to control its operation. Each unit is also represented as a GPU texture, and can be used in combination with others for effect. 
+The core of *C3F* is configurable rendering engine. It contains 26 units, designated in NATO phonetic alphabet from [Alfa](#alfa) to [Zulu](#zulu). Each unit has its own page of *Controls* to control its operation. Use the navigation as the top or side of your screen to switch between control pages. Each unit is also represented as a GPU texture, and can be used in combination with others for effect. 
 
 ---
 ### Controls
 
-Controls are.
-For instance, the control below chooses which texture is displayed on the shared viewport [Charlie](#charlie). Controls are shared by everyone, so be mindful when resources need to be shared.
+Controls are interfaces to *C3F* parameters. They are mostly selectors and sliders that change the parameters and routing of *C3F* data. For instance, the control below chooses which texture is displayed on the shared viewport [Charlie](#charlie). Please feel free to change every control in the system to experiment with new looks! Controls are shared by everyone, so be mindful of others when resources need to be shared. 
 
 ---
 ``` control
@@ -24,7 +23,7 @@ type: preview
 ### Inputs
 
 - [Alfa](#alfa), [Bravo](#bravo) and [Uniform](#uniform) are uniform inputs that flavour other processes.
-- [India](#india) and [Juliette](#juliette) are image inputs with upload function.
+- [India](#india) and [Juliette](#juliette) are image inputs. Upload your own imagery to help build C3F.
 - [Delta](#delta), [Golf](#golf) and [Hotel](#hotel) are pixel inputs, used to paint low resolution gradients and patterns.
 - [Lima](#lima) and [Yankee](#yankee) are configurable function generators.
 - [Mike](#mike) is an audio visualization.
@@ -33,12 +32,14 @@ type: preview
 ---
 ### Processes
 
+In *C3F*, every symbol can be used as a live input to a selection of image effects. By combining as changing the parameters fo these effects, new imagery can be created.
+
 - [Echo](#echo) is a cumulative feedback effect.
 - [November](#november) is a displacement effect.
 - [Oscar](#oscar) is the kaleidoscope Darren asked for.
 - [Papa](#papa) is a little fake particle system.
-- [Quebec](#papa) is a colour combination effect.
-- [Romeo](#papa) converts things to radial coordinates.
+- [Quebec](#quebec) is a colour combination effect.
+- [Romeo](#romeo) converts things to radial coordinates.
 - [Sierra](#sierra) renders a sphere.
 - [Victor](#victor) combines three textures.
 - [Zulu](#zulu) used pixels as colour maps.
@@ -46,8 +47,13 @@ type: preview
 ---
 ### Outputs
 
-- [Charlie](#charlie) is a shared main view screen, used for previewing other symbols. 
-- [Whiskey](#whiskey), [Tango](#tango) and [Foxtrot](#foxtrot) are main output screens.
+- [Charlie](#charlie) is a shared main view screen, used for previewing other symbols. Use *Charlie* to channel-flip between render units.
+- [Whiskey](#whiskey), [Tango](#tango) and [Foxtrot](#foxtrot) are main output screens. They each select a single texture as part of the primary result of *C3F*.
+
+---
+### Shaders
+
+The output of *C3F* can be radically altered by directly editing the GLSL shader code. To attain access to shader files, speak to the experiment organizer.
 
 # Alfa
 
@@ -127,6 +133,14 @@ options:
 ```
 
 ``` control
+path: /loopin/osd/enabled
+type: toggle
+colour: red
+title: FPS Display
+hide: path
+```
+
+``` control
 type: preview
 ```
 ``` control
@@ -200,6 +214,7 @@ options:
 
 *Golf* is pixel input. It allows for the painting of an 4x3 pixel image. Depending on *Filter*, *Delta* may be used as a gradient or grid.
 
+---
 ``` control
 path: /loopin/pixels/Golf
 type: pixels
@@ -343,9 +358,6 @@ subs:
   infrared:
     type: toggle
 
-  registration:
-    type: toggle
-
   led:
     type: options
     options:
@@ -376,8 +388,9 @@ options:
 
 # Lima
 
-*Lima* is a 2D low-frequecy oscillator.
+*Lima* is a 2D low-frequecy sin wave oscillator with colour channel phasing.
 
+---
 ``` control
 path: /loopin/render/Lima/float
 title: Lima
@@ -414,6 +427,11 @@ options:
   - Kilo
   - Lima
   - Mike
+```
+---
+``` control
+type: shaderError
+path: /loopin/shader/Lima/stderr
 ```
 
 # Mike
@@ -535,6 +553,11 @@ options:
   - November
   - Oscar
 ```
+---
+``` control
+type: shaderError
+path: /loopin/shader/November/stderr
+```
 
 
 # Oscar
@@ -553,18 +576,24 @@ options:
   - Oscar
   - Papa
 ```
+---
+``` control
+type: shaderError
+path: /loopin/shader/Oscar/stderr
+```
 
 # Papa
 
-Papa is a stateless particle system, splitting a single Texture into many quads and projecting them into 3D space.
+*Papa* is a stateless particle system, splitting a single Texture into many quads and projecting them into 3D space.
 
+---
 ``` control
-path: loopin/render/Papa/texture
+path: loopin/render/Papa/layer/over/texture
 type: oneTexture
 ```
 
 ``` control
-path: /loopin/render/Papa/blend
+path: /loopin/render/Papa/layer/over/blend
 type: blendsOnBlack
 ```
 
@@ -574,7 +603,7 @@ type: cameraForeground
 ```
 
 ``` control
-path: /loopin/render/Papa/transform
+path: /loopin/render/Papa/layer/over/transform
 type: transform
 ```
 
@@ -587,15 +616,21 @@ subs:
   cols:
     type: number
     quant: 1
+    digits: 0
+
     min: 1
     max: 60
   rows:
     type: number
     quant: 1
+    digits: 0
     min: 1
     max: 60
 ```
-
+``` control
+path: /loopin/render/Papa/texture
+type: backgroundTexture
+```
 ``` control
 type: Uniform
 ```
@@ -609,6 +644,10 @@ options:
   - Quebec
 ```
 
+``` control
+path: /loopin/shader/Papa/stderr
+type: shaderError
+```
 
 # Quebec
 
@@ -626,6 +665,11 @@ options:
   - Quebec
   - Romeo
 ```
+---
+``` control
+type: shaderError
+path: /loopin/shader/Quebec/stderr
+```
 
 # Romeo
 
@@ -642,6 +686,11 @@ options:
   - Quebec
   - Romeo
   - Sierra
+```
+---
+``` control
+type: shaderError
+path: /loopin/shader/Romeo/stderr
 ```
 
 # Sierra
@@ -678,6 +727,11 @@ options:
   - Romeo
   - Sierra
   - Tango
+```
+---
+``` control
+type: shaderError
+path: /loopin/shader/Sierra/stderr
 ```
 
 # Tango
@@ -730,6 +784,11 @@ options:
   - Victor
   - Whiskey
 ```
+---
+``` control
+type: shaderError
+path: /loopin/shader/Victor/stderr
+```
 
 # Whiskey
 
@@ -765,6 +824,11 @@ options:
   - Whiskey
   - Xray
   - Yankee
+```
+---
+``` control
+type: shaderError
+path: /loopin/shader/Xray/stderr
 ```
 
 # Yankee
@@ -809,6 +873,11 @@ options:
   - Yankee
   - Zulu
 ```
+---
+``` control
+type: shaderError
+path: /loopin/shader/Yankee/stderr
+```
 # Zulu
 
 *Zulu* maps from single Texture, to a set of colours from `Pixels`, using `Uniform` as flavour. This allows solarization and other effects.
@@ -836,9 +905,31 @@ options:
   - Zulu
   - Alfa
 ```
+---
+``` control
+type: shaderError
+path: /loopin/shader/Zulu/stderr
+```
 
 # Entropy
 
+**Entropy must be disabled during experiment!!** *Please do not touch!*
+
+---
 ``` control
-type: debug
+type: entropy
+```
+
+``` control
+path: /loopin/show/buffer
+hide: path
+title: Main Screen
+colour: red
+
+options:
+  - Charlie
+  - Charlie_zoom
+  - India_loader
+  - India
+  - Oscar
 ```

@@ -70,18 +70,26 @@ meta:
         - Yankee
         - Zulu
 
+    shaderError:
+      type: display
+      title: Shader Errors
+      hide: path
+      colour: blue
 
+    entropy:
+      colour: red
+      path: /entropy
+      type: number
+      title: Entropy
+      unit: '%'
+      max: 0.5
+      pow: 4
 
     debug:
       type: group
       subs:
         entropy:
-          colour: red
-          path: /entropy
-          type: number
-          unit: '%'
-          max: 0.05
-          pow: 3
+          type: entropy
         
         buffer:
           path: /loopin/show/buffer
@@ -252,7 +260,7 @@ meta:
         
         zoom:
           type: float
-          unit: "^ 2"
+          unit: "pow2"
           min: -2
           max: 2
 
