@@ -1,0 +1,18 @@
+show/buffer: crop
+
+osd/enabled: false
+
+buffer/crop:
+  width: 1440
+  height: 1080
+
+render/crop:
+  src: input
+  transform:
+    mode: cover
+    scale: 2
+
+syphon/input:
+  mode: client
+  name: ''
+  app: ofxLoopin-0.10.2-osx
