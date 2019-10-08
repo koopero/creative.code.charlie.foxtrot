@@ -8,7 +8,11 @@ The result will be a record of the state of the piece, represented as git commit
 
 # Participation
 
+To preview the controls of *C3F*, see the document [control/index.md](control/index.md).
+
 The initial *C3F* experiment is happening October 8th, 2019 at the Centre for Digital Media in Vancouver. See [the meetup page](https://www.meetup.com/Vancouver-Creative-Technology/events/264683290/) for more info.
+
+A lot of the code is still pretty fresh, but you can try running *C3F* using the instructions below.
 
 # Setup
 
@@ -34,6 +38,6 @@ npm start
 
 Special thanks to the following:
 
-- [Darren ]().
+- **Darren DeCoursey** for organizing the meetup and encouragement.
 - The [Vancouver Creative Tech Community](https://www.meetup.com/Vancouver-Creative-Technology/) for your continued support and feedback.
 - [HFour](http://hfour.ca/) for your enthusiastic support of open source psychedelia.

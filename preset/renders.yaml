@@ -63,11 +63,11 @@ render/Sierra:
   order: 0
   buffer: Sierra
   shader: One
-  depth: true
+  depth: false
 
   layer/over:
     aspect: 1
-    depth: true
+    depth: false
     clear: false
     mesh: Sierra
     camera: Sierra

@@ -1,14 +1,14 @@
 show/buffer: Charlie_zoom
 
 syphon/Charlie:
-  buffer: Charlie_zoom
+  buffer: Charlie
   mode: server
+  name: C3F
 
 render/Charlie:
   clear: true
   advance: true
   blend: none
-  
   texture/src/buffer: Charlie
 
   transform:
@@ -65,6 +65,3 @@ render/Charlie_zoom:
     scale: 2
     x: 1
     y: 1
-
-text/Charlie_text:
-  text: ' - + Charlie + - '

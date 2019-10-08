@@ -17,10 +17,9 @@ patch:
   #     enable: true
   #     # 
   #     # To determine your audio input deviceID, 
-  #     # globally install the npm package loopin-native
-  #     # and run `loopin-native --info`
+  #     # and run `./node_modules/.bin/loopin-native --info`
   #     #
   #     deviceID: 5
 
-  #     # This must 
+  #     # This must set this.
   #     channels: 1

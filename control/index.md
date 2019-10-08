@@ -4,7 +4,7 @@ Welcome to *C3F*, presented by [Vancouver Creative Tech](https://www.meetup.com/
 
 ## Mission
 
-Your mission, as a *C3F* participant, is the iterative, tasteful improvement 
+Your mission, as a *C3F* participant, is the iterative, tasteful improvement of the output of a singular, generative art piece. To accomplish this, you must work with the people around you to take control over an abstract toy rendering machine, feed input to the machine. There is no predetermined result; be creative, experiment, explore and have fun!
 
 ## Machine
 
@@ -159,7 +159,7 @@ type: pixels
 width: 8
 height: 6
 channels: rgba
-sliders: hsv a
+sliders: rgba
 ```
 ---
 ``` control
@@ -223,7 +223,7 @@ width: 4
 height: 3
 format: hex
 channels: rgba
-sliders: hsv a
+sliders: rgba
 ```
 ---
 ``` control
@@ -248,7 +248,7 @@ type: pixels
 width: 8
 height: 1
 channels: rgba
-sliders: hsv a
+sliders: rgba
 ```
 ---
 ``` control
