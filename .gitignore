@@ -1,6 +1,6 @@
 # Runtime output from applications, including snapshots and
 # recorder output and intermediary files.
-data/**
+# data/**
 # !data/persist.?.yaml
 
 # Local config file.
