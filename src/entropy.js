@@ -70,7 +70,10 @@ module.exports = async function ( {
     })
     _.map( spec.pixels, ( pixels, path ) => {
       let existing = loopin.H.root.get( path +'/data' )
-      // console.log( existing )
+      
+      // Bail if there is already art
+      if ( existing )
+        return
 
       let { width, height } = pixels
 
