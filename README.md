@@ -16,7 +16,7 @@ A lot of the code is still pretty fresh, but you can try running *C3F* using the
 
 # Setup
 
-You may use this source code to run your own copy of C3F. To do so, you should have a working knowledge of `node.js` and `git`. 
+You may use this source code to run your own copy of C3F. To do so, you should have a working knowledge of `node.js` and `git`. *Please note that Windows support is borken at this time!*
 
 ``` sh
 git clone https://github.com/koopero/creative.code.charlie.foxtrot/
