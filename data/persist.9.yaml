@@ -1,0 +1,444 @@
+# written by horten-persist-file at 2019-10-08T21:26:19-07:00
+loopin:
+  render:
+    Charlie:
+      texture:
+        src:
+          buffer: India
+          filter: linear
+    India:
+      float:
+        zoom: 0.388
+    Juliette:
+      float:
+        zoom: 0.283
+    Lima:
+      float:
+        rotation: 159.766
+        zoom: 0.986
+        frequency: 4.397
+        split: 0.862
+    Mike:
+      transform:
+        x: -0.099
+        'y': 0.047
+        rotate: 219.416
+      texture:
+        One:
+          filter: nearest
+    Papa:
+      layer:
+        over:
+          transform:
+            x: -0.044
+            'y': -0.285
+            scale: 0.5530728735375958
+          texture:
+            One:
+              buffer: Tango
+              filter: linear
+          blend: alpha
+      texture:
+        One:
+          buffer: Hotel
+          filter: linear
+    Sierra:
+      layer:
+        over:
+          transform:
+            x: 0.044
+            'y': -0.493
+            scale: 0.63502683633699
+          texture:
+            One:
+              buffer: November
+              filter: linear
+          blend: alpha
+      texture:
+        One:
+          buffer: Romeo
+          filter: nearest
+    Yankee:
+      float:
+        rotation: 86.715
+        zoom: -0.88
+        frequency: 3.834
+        split: 1
+    Echo:
+      texture:
+        One:
+          buffer: November
+          filter: nearest
+    Foxtrot:
+      texture:
+        One:
+          buffer: Charlie
+          filter: linear
+    November:
+      texture:
+        One:
+          buffer: Lima
+          filter: linear
+        Two:
+          buffer: India
+          filter: linear
+    Oscar:
+      texture:
+        One:
+          buffer: Oscar
+          filter: nearest
+    Quebec:
+      texture:
+        One:
+          buffer: Juliette
+          filter: nearest
+        Two:
+          buffer: Kilo
+          filter: nearest
+    Tango:
+      texture:
+        One:
+          buffer: Papa
+          filter: nearest
+    Victor:
+      texture:
+        One:
+          buffer: Juliette
+          filter: linear
+        Two:
+          buffer: Hotel
+          filter: linear
+        Three:
+          buffer: Golf
+          filter: nearest
+    Whiskey:
+      texture:
+        One:
+          buffer: Sierra
+          filter: linear
+    Xray:
+      texture:
+        One:
+          buffer: Kilo
+          filter: nearest
+        Two:
+          buffer: Yankee
+          filter: nearest
+    Zulu:
+      texture:
+        One:
+          buffer: Juliette
+          filter: linear
+        Two:
+          buffer: Golf
+    Romeo:
+      texture:
+        One:
+          buffer: Oscar
+          filter: linear
+  uniform:
+    vec4:
+      Alfa:
+        x: 0.645
+        'y': 0.518
+        z: 0.043
+        w: 0.435
+      Bravo:
+        x: -0.649
+        'y': 1
+        z: -0.89
+        w: 1
+      Uniform:
+        x: 0.833
+        'y': 0.63
+        z: 0.341
+        w: 0.659
+  mesh:
+    Papa:
+      plane:
+        cols: 14
+        rows: 16
+  camera:
+    Papa:
+      yaw: 153.285
+      pitch: 0.921
+      roll: -162.482
+      fov: 69.909
+      zoom: -1.114
+    Sierra:
+      yaw: 79.708
+      pitch: 57.826
+      roll: -177.17101660952216
+      fov: 25.99928478763626
+      zoom: -0.35741915860289986
+  pixels:
+    Delta:
+      data: >
+        #fbffffb2 #fbffffb2 #fbb3daff #fbb3daff #fbb3daff #fbffffb2 #fbffffb2
+        #fbffffb2
+
+        #5600ceb2 #5600ceb2 #fbffffb2 #fbffffb2 #fbffffb2 #09004fb2 #fbffffb2
+        #fbffffb2
+
+        #00b3daff #5600ceb2 #09004fb2 #5600f4b2 #5600f4b2 #09004fb2 #09004fb2
+        #fbff00b2
+
+        #00b3daff #5600ceb2 #09004fb2 #5600f4b2 #5600f4b2 #09004fb2 #09004fb2
+        #fbff00b2
+
+        #5600ceb2 #5600ceb2 #fbffffb2 #fbffffb2 #fbffffb2 #09004fb2 #fbffffb2
+        #fbffffb2
+
+        #fbffffb2 #fbffffb2 #fbb3daff #fbb3daff #fbb3daff #fbffffb2 #fbffffb2
+        #fbffffb2
+      width: 8
+      height: 6
+      format: hex
+      channels: rgba
+    Golf:
+      data: |
+        #fb0000ff #0000e6ff #00e8b7ff #0000b7ff
+        #0000e6ff #00efe6ff #8600e6ff #00efe6ff
+        #86ffe6ff #8600e6ff #8600e6ff #fb0000ff
+      width: 4
+      height: 3
+      format: hex
+      channels: rgba
+    Hotel:
+      data: >
+        #d5add9ff #ffffffff #5eadd9ff #e1e000ff #e1e07aff #e1dab6ff #ffffffff
+        #5ead2cff
+      width: 8
+      height: 1
+      format: hex
+      channels: rgba
+  image:
+    India_loader:
+      src: data/upload/2019-10-08/advemturetime_nehu2a.jpg
+      error: null
+      file: >-
+        /Volumes/hdd/koop/Code/Loopin/creative.code.charlie.foxtrot/data/upload/2019-10-08/advemturetime_nehu2a.jpg
+      height: 683
+      loaded: true
+      width: 1024
+      name: advemturetime.jpg
+    Juliette_loader:
+      src: data/upload/2019-10-08/Chairman-Meow_br32Su.jpg
+      error: null
+      file: >-
+        /Volumes/hdd/koop/Code/Loopin/creative.code.charlie.foxtrot/data/upload/2019-10-08/Chairman-Meow_br32Su.jpg
+      height: 2048
+      loaded: true
+      width: 1639
+      name: Chairman-Meow.jpg
+  info:
+    grabber:
+      devices: []
+    syphon:
+      servers:
+        - app: ofxLoopin-0.10.2-osx
+          name: C3F
+    waveform:
+      devices:
+        '0':
+          deviceID: 0
+          inputChannels: 2
+          name: 'Apple Inc.: Built-in Microphone'
+        '1':
+          deviceID: 6
+          inputChannels: 2
+          name: 'BurrBrown from Texas Instruments: USB AUDIO  CODEC'
+    window:
+      gl:
+        ES: false
+        VersionMajor: 3
+        VersionMinor: 2
+  waveform:
+    Mike_input:
+      duration: 3
+      gain: 0.131
+      squelch: 0.07
+  show:
+    buffer: India_loader
+  osd:
+    enabled: true
+  kinect:
+    Kilo:
+      led: blinkGreen
+      tilt: -15.217
+      infrared: false
+  buffer:
+    Mike_input:
+      width: 256
+upload:
+  image_8yySs0.jpg:
+    file: data/upload/2019-10-08/image_8yySs0.jpg
+    src: data/upload/2019-10-08/image_8yySs0.jpg
+    name: image.jpg
+  noun_Burger_2897044_S9bnRg.png:
+    file: data/upload/2019-10-08/noun_Burger_2897044_S9bnRg.png
+    src: data/upload/2019-10-08/noun_Burger_2897044_S9bnRg.png
+    name: noun_Burger_2897044.png
+  noun_Mushroom_103765_3n6ffb.png:
+    file: data/upload/2019-10-08/noun_Mushroom_103765_3n6ffb.png
+    src: data/upload/2019-10-08/noun_Mushroom_103765_3n6ffb.png
+    name: noun_Mushroom_103765.png
+  noun_Halloween_2003094_J30PUG.png:
+    file: data/upload/2019-10-08/noun_Halloween_2003094_J30PUG.png
+    src: data/upload/2019-10-08/noun_Halloween_2003094_J30PUG.png
+    name: noun_Halloween_2003094.png
+  nyan-cat_eb60BO.gif:
+    file: data/upload/2019-10-08/nyan-cat_eb60BO.gif
+    src: data/upload/2019-10-08/nyan-cat_eb60BO.gif
+    name: nyan-cat.gif
+  noun_Burger_2897044_qguPts.jpg:
+    file: data/upload/2019-10-08/noun_Burger_2897044_qguPts.jpg
+    src: data/upload/2019-10-08/noun_Burger_2897044_qguPts.jpg
+    name: noun_Burger_2897044.jpg
+  657265-fred_flintstone_aBp3be.jpg:
+    file: data/upload/2019-10-08/657265-fred_flintstone_aBp3be.jpg
+    src: data/upload/2019-10-08/657265-fred_flintstone_aBp3be.jpg
+    name: 657265-fred_flintstone.jpg
+  24987430-Cartoon-beggar-_QdOoGU.jpg:
+    file: data/upload/2019-10-08/24987430-Cartoon-beggar-_QdOoGU.jpg
+    src: data/upload/2019-10-08/24987430-Cartoon-beggar-_QdOoGU.jpg
+    name: >-
+      24987430-Cartoon-beggar-clip-art-illustration-with-simple-gradients-All-in-a-single-layer-Stock-Vector.jpg
+  sockk_anU8gb.png:
+    file: data/upload/2019-10-08/sockk_anU8gb.png
+    src: data/upload/2019-10-08/sockk_anU8gb.png
+    name: sockk.png
+  image_Rc8unj.jpeg:
+    file: data/upload/2019-10-08/image_Rc8unj.jpeg
+    src: data/upload/2019-10-08/image_Rc8unj.jpeg
+    name: image.jpeg
+  poster_working_copy_qrDSh9.png:
+    file: data/upload/2019-10-08/poster_working_copy_qrDSh9.png
+    src: data/upload/2019-10-08/poster_working_copy_qrDSh9.png
+    name: poster_working_copy.png
+  IMG_0990_J6dJB9.JPG:
+    file: data/upload/2019-10-08/IMG_0990_J6dJB9.JPG
+    src: data/upload/2019-10-08/IMG_0990_J6dJB9.JPG
+    name: IMG_0990.JPG
+  flag-for-canada_1f1e8-1f_hPtjjj.png:
+    file: data/upload/2019-10-08/flag-for-canada_1f1e8-1f_hPtjjj.png
+    src: data/upload/2019-10-08/flag-for-canada_1f1e8-1f_hPtjjj.png
+    name: flag-for-canada_1f1e8-1f1e6-2.png
+  Butterfly_2_q0J029.jpg:
+    file: data/upload/2019-10-08/Butterfly_2_q0J029.jpg
+    src: data/upload/2019-10-08/Butterfly_2_q0J029.jpg
+    name: Butterfly_2.jpg
+  flag-for-canada_1f1e8-1f_BfJQtg.png:
+    file: data/upload/2019-10-08/flag-for-canada_1f1e8-1f_BfJQtg.png
+    src: data/upload/2019-10-08/flag-for-canada_1f1e8-1f_BfJQtg.png
+    name: flag-for-canada_1f1e8-1f1e6-2.png
+  Chairman-Meow_GqreBU.jpg:
+    file: data/upload/2019-10-08/Chairman-Meow_GqreBU.jpg
+    src: data/upload/2019-10-08/Chairman-Meow_GqreBU.jpg
+    name: Chairman-Meow.jpg
+  CHAPTER-2_ohssj5.jpg:
+    file: data/upload/2019-10-08/CHAPTER-2_ohssj5.jpg
+    src: data/upload/2019-10-08/CHAPTER-2_ohssj5.jpg
+    name: CHAPTER-2.jpg
+  Chairman-Meow_br32Su.jpg:
+    file: data/upload/2019-10-08/Chairman-Meow_br32Su.jpg
+    src: data/upload/2019-10-08/Chairman-Meow_br32Su.jpg
+    name: Chairman-Meow.jpg
+  image_adRrSR.jpeg:
+    file: data/upload/2019-10-08/image_adRrSR.jpeg
+    src: data/upload/2019-10-08/image_adRrSR.jpeg
+    name: image.jpeg
+  unnamed_BQ5Jnb.jpg:
+    file: data/upload/2019-10-08/unnamed_BQ5Jnb.jpg
+    src: data/upload/2019-10-08/unnamed_BQ5Jnb.jpg
+    name: unnamed.jpg
+  Lamborghini_Terzo_Millen_OfctPf.jpg:
+    file: data/upload/2019-10-08/Lamborghini_Terzo_Millen_OfctPf.jpg
+    src: data/upload/2019-10-08/Lamborghini_Terzo_Millen_OfctPf.jpg
+    name: Lamborghini_Terzo_Millennio_3_4_front.0.jpg
+  __akali_and_k_da_akali_l_Gu303o.png:
+    file: data/upload/2019-10-08/__akali_and_k_da_akali_l_Gu303o.png
+    src: data/upload/2019-10-08/__akali_and_k_da_akali_l_Gu303o.png
+    name: >-
+      __akali_and_k_da_akali_league_of_legends_drawn_by_gang_g__3519dbca1c9345ad93cbee9a103220fe.png
+  unnamed_U0UG6B.jpg:
+    file: data/upload/2019-10-08/unnamed_U0UG6B.jpg
+    src: data/upload/2019-10-08/unnamed_U0UG6B.jpg
+    name: unnamed.jpg
+  winter_gyCJsD.JPG:
+    file: data/upload/2019-10-08/winter_gyCJsD.JPG
+    src: data/upload/2019-10-08/winter_gyCJsD.JPG
+    name: winter.JPG
+  winter_0nCstC.JPG:
+    file: data/upload/2019-10-08/winter_0nCstC.JPG
+    src: data/upload/2019-10-08/winter_0nCstC.JPG
+    name: winter.JPG
+  IMG_2732_copy_yRC98s.jpg:
+    file: data/upload/2019-10-08/IMG_2732_copy_yRC98s.jpg
+    src: data/upload/2019-10-08/IMG_2732_copy_yRC98s.jpg
+    name: IMG_2732 copy.jpg
+  winter_3hsOBS.JPG:
+    file: data/upload/2019-10-08/winter_3hsOBS.JPG
+    src: data/upload/2019-10-08/winter_3hsOBS.JPG
+    name: winter.JPG
+  Screen_Shot_2019-10-03_a_2yDD2B.png:
+    file: data/upload/2019-10-08/Screen_Shot_2019-10-03_a_2yDD2B.png
+    src: data/upload/2019-10-08/Screen_Shot_2019-10-03_a_2yDD2B.png
+    name: Screen Shot 2019-10-03 at 6.11.38 PM.png
+  winter_QbdhfQ.JPG:
+    file: data/upload/2019-10-08/winter_QbdhfQ.JPG
+    src: data/upload/2019-10-08/winter_QbdhfQ.JPG
+    name: winter.JPG
+  Elephant_suit_syf6O6.jpg:
+    file: data/upload/2019-10-08/Elephant_suit_syf6O6.jpg
+    src: data/upload/2019-10-08/Elephant_suit_syf6O6.jpg
+    name: Elephant suit.jpg
+  image_qacG08.jpeg:
+    file: data/upload/2019-10-08/image_qacG08.jpeg
+    src: data/upload/2019-10-08/image_qacG08.jpeg
+    name: image.jpeg
+  Elephant_suit_B0uq20.jpg:
+    file: data/upload/2019-10-08/Elephant_suit_B0uq20.jpg
+    src: data/upload/2019-10-08/Elephant_suit_B0uq20.jpg
+    name: Elephant suit.jpg
+  IMG_2883_OR5bQU.JPG:
+    file: data/upload/2019-10-08/IMG_2883_OR5bQU.JPG
+    src: data/upload/2019-10-08/IMG_2883_OR5bQU.JPG
+    name: IMG_2883.JPG
+  IMG_2858_t2pftn.JPG:
+    file: data/upload/2019-10-08/IMG_2858_t2pftn.JPG
+    src: data/upload/2019-10-08/IMG_2858_t2pftn.JPG
+    name: IMG_2858.JPG
+  IMG_1612_tfDORJ.JPG:
+    file: data/upload/2019-10-08/IMG_1612_tfDORJ.JPG
+    src: data/upload/2019-10-08/IMG_1612_tfDORJ.JPG
+    name: IMG_1612.JPG
+  IMG_1612_r3909p.JPG:
+    file: data/upload/2019-10-08/IMG_1612_r3909p.JPG
+    src: data/upload/2019-10-08/IMG_1612_r3909p.JPG
+    name: IMG_1612.JPG
+  advemturetime_nehu2a.jpg:
+    file: data/upload/2019-10-08/advemturetime_nehu2a.jpg
+    src: data/upload/2019-10-08/advemturetime_nehu2a.jpg
+    name: advemturetime.jpg
+  unnamed_a3qbt8.jpg:
+    file: data/upload/2019-10-08/unnamed_a3qbt8.jpg
+    src: data/upload/2019-10-08/unnamed_a3qbt8.jpg
+    name: unnamed.jpg
+  IMG_4060_cdftuc.JPG:
+    file: data/upload/2019-10-08/IMG_4060_cdftuc.JPG
+    src: data/upload/2019-10-08/IMG_4060_cdftuc.JPG
+    name: IMG_4060.JPG
+  posters5_n3Q89B.png:
+    file: data/upload/2019-10-08/posters5_n3Q89B.png
+    src: data/upload/2019-10-08/posters5_n3Q89B.png
+    name: posters5.png
+  noun_Halloween_2003094_QBa26n.jpg:
+    file: data/upload/2019-10-08/noun_Halloween_2003094_QBa26n.jpg
+    src: data/upload/2019-10-08/noun_Halloween_2003094_QBa26n.jpg
+    name: noun_Halloween_2003094.jpg
+  IMG_4062_nr05oP.JPG:
+    file: data/upload/2019-10-08/IMG_4062_nr05oP.JPG
+    src: data/upload/2019-10-08/IMG_4062_nr05oP.JPG
+    name: IMG_4062.JPG
+entropy: 0
